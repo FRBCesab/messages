@@ -66,18 +66,33 @@ msg_oops("An error message")
 msg_line("A classic message")
 #> A classic message
 
-## Message with a rule ----
+## Message within a rule ----
 msg_rule("Left message")
 #> ── Left message ─────────────────────────────────────────────────────────────────────────
+
+## Message within a rule ----
 msg_rule(center = "Center message")
 #> ───────────────────────────────────── Center message ────────────────────────────────────
 
+## Message within a rule ----
+msg_rule(right = "Right message")
+#> ──────────────────────────────────────────────────────────────────────── Right message ──
+
+
 ## Messages with inline customization ----
 x <- 1
+
 msg_done("The variable", msg_field("x"), "has been set to", msg_value(x))
 #> ✓ The variable x has been set to 1
+
+## Messages with inline customization (2) ----
 msg_todo("Please use the function:", msg_code("msg_rule()"))
 #> • Please use the function: `msg_rule()`
+
+## Messages with inline customization (3) ----
+msg_todo("Please use the function:\n", msg_code("msg_rule()"))
+#> • Please use the function:
+#>   `msg_rule()`
 ```
 
 ## Citation
