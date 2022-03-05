@@ -80,9 +80,48 @@
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"frbcesab/messages"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="get-started">Get started<a class="anchor" aria-label="anchor" href="#get-started"></a>
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p>Please read the <a href="https://frbcesab.github.io/messages/articles/messages.html" class="external-link">Get started</a> vignette.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Attach package ----</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/FRBCesab/messages" class="external-link">"messages"</a></span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Success message ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_done</a></span><span class="op">(</span><span class="st">"A success message"</span><span class="op">)</span>
+<span class="co">#&gt; ✓ A success message</span>
+
+<span class="co">## Todo message ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_todo</a></span><span class="op">(</span><span class="st">"A to do message"</span><span class="op">)</span>
+<span class="co">#&gt; • A to do message</span>
+
+<span class="co">## Info message ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_info</a></span><span class="op">(</span><span class="st">"An informational message"</span><span class="op">)</span>
+<span class="co">#&gt; ℹ An informational message</span>
+
+<span class="co">## Warning message ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_warn</a></span><span class="op">(</span><span class="st">"A warning message"</span><span class="op">)</span>
+<span class="co">#&gt; ! A warning message</span>
+
+<span class="co">## Error message ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_oops</a></span><span class="op">(</span><span class="st">"An error message"</span><span class="op">)</span>
+<span class="co">#&gt; x An error message</span>
+
+<span class="co">## Message ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_line</a></span><span class="op">(</span><span class="st">"A classic message"</span><span class="op">)</span>
+<span class="co">#&gt; A classic message</span>
+
+<span class="co">## Message with a rule ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_rule</a></span><span class="op">(</span><span class="st">"Left message"</span><span class="op">)</span>
+<span class="co">#&gt; ── Left message ─────────────────────────────────────────────────────────────────────────</span>
+<span class="fu"><a href="reference/msg_done.html">msg_rule</a></span><span class="op">(</span>center <span class="op">=</span> <span class="st">"Center message"</span><span class="op">)</span>
+<span class="co">#&gt; ───────────────────────────────────── Center message ────────────────────────────────────</span>
+
+<span class="co">## Messages with inline customization ----</span>
+<span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span>
+<span class="fu"><a href="reference/msg_done.html">msg_done</a></span><span class="op">(</span><span class="st">"The variable"</span>, <span class="fu"><a href="reference/msg_done.html">msg_field</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span>, <span class="st">"has been set to"</span>, <span class="fu"><a href="reference/msg_done.html">msg_value</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; ✓ The variable x has been set to 1</span>
+<span class="fu"><a href="reference/msg_done.html">msg_todo</a></span><span class="op">(</span><span class="st">"Please use the function:"</span>, <span class="fu"><a href="reference/msg_done.html">msg_code</a></span><span class="op">(</span><span class="st">"msg_rule()"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; • Please use the function: `msg_rule()`</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
@@ -92,7 +131,7 @@
 <p>Casajus N. (2022) messages: Print messages in the console. R package version 1.0. URL: <a href="https://frbcesab.github.io/messages/" class="external-link uri">https://frbcesab.github.io/messages/</a>.</p>
 </blockquote>
 <p>You can also run:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"messages"</span><span class="op">)</span>
 
 <span class="co">## A BibTeX entry for LaTeX users is:</span>
