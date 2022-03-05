@@ -110,18 +110,33 @@
 <span class="fu"><a href="reference/msg_done.html">msg_line</a></span><span class="op">(</span><span class="st">"A classic message"</span><span class="op">)</span>
 <span class="co">#&gt; A classic message</span>
 
-<span class="co">## Message with a rule ----</span>
+<span class="co">## Message within a rule ----</span>
 <span class="fu"><a href="reference/msg_done.html">msg_rule</a></span><span class="op">(</span><span class="st">"Left message"</span><span class="op">)</span>
 <span class="co">#&gt; ── Left message ─────────────────────────────────────────────────────────────────────────</span>
+
+<span class="co">## Message within a rule ----</span>
 <span class="fu"><a href="reference/msg_done.html">msg_rule</a></span><span class="op">(</span>center <span class="op">=</span> <span class="st">"Center message"</span><span class="op">)</span>
 <span class="co">#&gt; ───────────────────────────────────── Center message ────────────────────────────────────</span>
 
+<span class="co">## Message within a rule ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_rule</a></span><span class="op">(</span>right <span class="op">=</span> <span class="st">"Right message"</span><span class="op">)</span>
+<span class="co">#&gt; ──────────────────────────────────────────────────────────────────────── Right message ──</span>
+
+
 <span class="co">## Messages with inline customization ----</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span>
+
 <span class="fu"><a href="reference/msg_done.html">msg_done</a></span><span class="op">(</span><span class="st">"The variable"</span>, <span class="fu"><a href="reference/msg_done.html">msg_field</a></span><span class="op">(</span><span class="st">"x"</span><span class="op">)</span>, <span class="st">"has been set to"</span>, <span class="fu"><a href="reference/msg_done.html">msg_value</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; ✓ The variable x has been set to 1</span>
+
+<span class="co">## Messages with inline customization (2) ----</span>
 <span class="fu"><a href="reference/msg_done.html">msg_todo</a></span><span class="op">(</span><span class="st">"Please use the function:"</span>, <span class="fu"><a href="reference/msg_done.html">msg_code</a></span><span class="op">(</span><span class="st">"msg_rule()"</span><span class="op">)</span><span class="op">)</span>
-<span class="co">#&gt; • Please use the function: `msg_rule()`</span></code></pre></div>
+<span class="co">#&gt; • Please use the function: `msg_rule()`</span>
+
+<span class="co">## Messages with inline customization (3) ----</span>
+<span class="fu"><a href="reference/msg_done.html">msg_todo</a></span><span class="op">(</span><span class="st">"Please use the function:\n"</span>, <span class="fu"><a href="reference/msg_done.html">msg_code</a></span><span class="op">(</span><span class="st">"msg_rule()"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; • Please use the function:</span>
+<span class="co">#&gt;   `msg_rule()`</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
