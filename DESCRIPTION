@@ -1,0 +1,23 @@
+Package: messages
+Type: Package
+Title: Print Messages in the Console
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given   = "Nicolas",
+           family  = "Casajus",
+           role    = c("aut", "cre"),
+           email   = "nicolas.casajus@fondationbiodiversite.fr",
+           comment = c(ORCID = "0000-0002-5537-5294")))
+Description: A collection of functions to print messages in the R console using
+    the packages 'cli' and 'crayon'. This package is strongly inspired from the
+    functions ui_*() of the package 'usethis'.
+URL: https://github.com/FRBCesab/messages
+BugReports: https://github.com/FRBCesab/messages/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    cli,
+    crayon
