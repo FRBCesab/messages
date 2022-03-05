@@ -34,6 +34,8 @@ R console using the packages [`cli`](https://cran.r-project.org/package=cli) and
 inspired from the functions `ui_*()` of the package 
 [`usethis`](https://cran.r-project.org/package=usethis).
 
+
+
 ## Installation
 
 You can install the development version from [GitHub](https://github.com/) with:
@@ -45,11 +47,41 @@ remotes::install_github("frbcesab/messages")
 ```
 
 
-## Get started
+## Usage
 
-Please read the 
-[Get started](https://frbcesab.github.io/messages/articles/messages.html) 
-vignette.
+```{r}
+## Attach package ----
+library("messages")
+```
+
+```{r}
+## Success message ----
+msg_done("A success message")
+
+## Todo message ----
+msg_todo("A to do message")
+
+## Info message ----
+msg_info("An informational message")
+
+## Warning message ----
+msg_warn("A warning message")
+
+## Error message ----
+msg_oops("An error message")
+
+## Message ----
+msg_line("A classic message")
+
+## Message with a rule ----
+msg_rule("Left message")
+msg_rule(center = "Center message")
+
+## Messages with inline customization ----
+x <- 1
+msg_done("The variable", msg_field("x"), "has been set to", msg_value(x))
+msg_todo("Please use the function:", msg_code("msg_rule()"))
+```
 
 
 ## Citation

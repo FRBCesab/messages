@@ -34,11 +34,51 @@ You can install the development version from
 remotes::install_github("frbcesab/messages")
 ```
 
-## Get started
+## Usage
 
-Please read the [Get
-started](https://frbcesab.github.io/messages/articles/messages.html)
-vignette.
+``` r
+## Attach package ----
+library("messages")
+```
+
+``` r
+## Success message ----
+msg_done("A success message")
+#> ✓ A success message
+
+## Todo message ----
+msg_todo("A to do message")
+#> • A to do message
+
+## Info message ----
+msg_info("An informational message")
+#> ℹ An informational message
+
+## Warning message ----
+msg_warn("A warning message")
+#> ! A warning message
+
+## Error message ----
+msg_oops("An error message")
+#> x An error message
+
+## Message ----
+msg_line("A classic message")
+#> A classic message
+
+## Message with a rule ----
+msg_rule("Left message")
+#> ── Left message ─────────────────────────────────────────────────────────────────────────
+msg_rule(center = "Center message")
+#> ───────────────────────────────────── Center message ────────────────────────────────────
+
+## Messages with inline customization ----
+x <- 1
+msg_done("The variable", msg_field("x"), "has been set to", msg_value(x))
+#> ✓ The variable x has been set to 1
+msg_todo("Please use the function:", msg_code("msg_rule()"))
+#> • Please use the function: `msg_rule()`
+```
 
 ## Citation
 
