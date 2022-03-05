@@ -1,11 +1,11 @@
 Package: messages
 Type: Package
 Title: Print Messages in the Console
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: c(
     person(given   = "Nicolas",
            family  = "Casajus",
-           role    = c("aut", "cre"),
+           role    = c("aut", "cre", "cph"),
            email   = "nicolas.casajus@fondationbiodiversite.fr",
            comment = c(ORCID = "0000-0002-5537-5294")))
 Description: A collection of functions to print messages in the R console using

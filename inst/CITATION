@@ -1,0 +1,10 @@
+citHeader("To cite messages in publications use:")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "messages: {P}rint messages in the console",
+  author  = c(person("Casajus N.")),
+  year    = "2022",
+  note    = "R package version 1.0",
+  url     = "https://frbcesab.github.io/messages/"
+)
